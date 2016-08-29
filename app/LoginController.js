@@ -31,8 +31,9 @@
         this.gcmSend = function(sub) {
             // send token to server and save it
             debugger
-            $http.post('https://localhost:44300', { "token": sub.subscriptionId });
-            LoginService.gcmSend(sub);           
+          //  $http.post('https://localhost:44300', { "token": sub.subscriptionId });
+          //  LoginService.gcmSend(sub);    
+			consolelog(sub)		  
             			
             }
         
