@@ -169,7 +169,7 @@
 (function () {
     'use strict'
     angular.module('myapp', ['ui.router', 'angular-web-notification'])
-          .directive('gcm', function ($scope) {
+          .directive('gcm', function () {
               return {
                   restrict: 'E',
                   scope: {
