@@ -222,8 +222,8 @@
                           // endpointWorkaround(subscription)
 
                           var mergedEndpoint = endpointWorkaround(subscription);
-
-                          scope.callback(subscription);
+						  console.log(subscription)
+                          scope.callback&& scope.callback(subscription);
                       }
 
                       function unsubscribe() {
