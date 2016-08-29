@@ -1,8 +1,8 @@
 ﻿{
 "name": "mobiForge Push",
 "short_name": "mobiForge push",
-"start_url": "http://localhost:51520/Login.html#/Login.html",
+"start_url": "Login.html",
 "display": "standalone",
-"gcm_sender_id": "YOUR_GOOGLE_DEVELOPERS_APP_ID",
+"gcm_sender_id": "376551234215",
 "gcm_user_visible_only": true
 }
