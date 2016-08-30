@@ -8,9 +8,11 @@ self.addEventListener('push', function (event) {
     if (event.data) {
         data = event.data;
     }
-
-    var title = data.title || 'My title';
-    var body = data.body || 'My Body';
+    data.title = "EmailReceived";
+    data.body = "it's been too long ur working ";
+    data.icon="D:\application\FirstSample\FirstSample\app/Images/LoginImg.jpg"
+    var title = data.title || ' title';
+    var body = data.body || ' Body';
     var icon = data.icon || 'logo.png';
     var tag = data.tag || 'tag';
     event.waitUntil(
