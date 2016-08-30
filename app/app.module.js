@@ -222,9 +222,7 @@
                           // endpointWorkaround(subscription)
 
                           var mergedEndpoint = endpointWorkaround(subscription);
-						  console.log(subscription)
-						  const endPoint = pushSubscription.endpoint.slice(pushSubscription.endpoint.lastIndexOf('/')+1);
-						  console.log(endPoint)
+						  console.log(subscription)						  
                           scope.callback&& scope.callback(subscription);
                       }
 
