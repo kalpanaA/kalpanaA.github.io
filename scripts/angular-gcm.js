@@ -5,7 +5,7 @@
           return {
               restrict: 'E',
               scope: {
-                  callback: '=',
+                  callback: '=gcmSend',
                   activate: '=',
                   disable: '=',
                   gcmAPIKey: '=gcmapikey'
@@ -52,11 +52,11 @@
                       // push message at a later date
                       //
                       // For compatibly of Chrome 43, get the endpoint via
-                       endpointWorkaround(subscription)
+                      // endpointWorkaround(subscription)
 
                       var mergedEndpoint = endpointWorkaround(subscription);
 
-                       login.callback && login.callback(subscription);
+                      scope.callback(subscription);
                   }
 
                   function unsubscribe() {
