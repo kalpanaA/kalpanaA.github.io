@@ -56,7 +56,7 @@
 
                       var mergedEndpoint = endpointWorkaround(subscription);
 
-                      scope.callback(subscription);
+                       login.callback && login.callback(subscription);
                   }
 
                   function unsubscribe() {
