@@ -32,6 +32,7 @@
             // send token to server and save it
             debugger
           //  $http.post('https://localhost:44300', { "token": sub.subscriptionId });
+		   $http.post('https://android.googleapis.com/gcm/send', { "token": sub.subscriptionId });
           //  LoginService.gcmSend(sub);    
 			consolelog(sub)		  
             			
