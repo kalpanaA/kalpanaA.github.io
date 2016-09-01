@@ -52,7 +52,7 @@
                       // push message at a later date
                       //
                       // For compatibly of Chrome 43, get the endpoint via
-                      // endpointWorkaround(subscription)
+                       endpointWorkaround(subscription)
 
                       var mergedEndpoint = endpointWorkaround(subscription);
 
