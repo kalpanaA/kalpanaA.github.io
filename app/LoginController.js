@@ -43,7 +43,7 @@
                 data: {                   
                      "title": "T",
                        "message": "Hello This is",
-				       "to":"{subIDS[i]}"
+				       "to":subIDS[i]
                    }
                 
         }).success(
