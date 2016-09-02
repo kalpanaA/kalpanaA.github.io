@@ -28,30 +28,30 @@
             }
           
         }
-        this.gcmSend = function () {
+            this.gcmSend = function () {
             debugger
             // send token to server and save it
-            var request = $http({
+        $http({
                 method: "post",
-                url: "https://android.googleapis.com/gcm/send/AIzaSyCpPQM5dBdcoAMVyvJvfrm_fN12p4UEf3w",
-                //transformRequest: transformRequestAsFormPost,
+                url: "https://android.googleapis.com/gcm/send",
+                headers: { 'Content-Type': 'application/json', 'Authorization': 'key = AIzaSyCpPQM5dBdcoAMVyvJvfrm_fN12p4UEf3w' },
                 data: {                   
                      "title": "T",
                        "message": "Hello This is",
                        "to":"e1tCb2eanKY:APA91bHUW7jz6e4XZ-ty3O3npDy3LrZJvpqsmogKj3EaO4ndoWrmegC29nhedGl4Mu-4-SfyRPtTGyJql86NWzugsg0MKCBk68WjOff0ivJC581GFWKSHUhPiMkuXbeER81Hd0pUC7Zq"
                    }
                 
-            });
-            // Store the data-dump of the FORM scope.
-            request.success(
+        }).success(
+           // Store the data-dump of the FORM scope.
                 
-                function (html) {
+                function (data) {
                     debugger
                     $scope.cfdump = html;
                 }
             );             
             			
             }
+        
         
     }
     LoginController.$inject = ['LoginService', '$state', '$window', 'webNotification', '$http'];
