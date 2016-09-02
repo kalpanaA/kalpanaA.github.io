@@ -30,11 +30,25 @@
         }
         this.gcmSend = function() {
             // send token to server and save it
-            debugger        
-		   $http.post('https://android.googleapis.com/gcm/send/?Authorization?key=AIzaSyCpPQM5dBdcoAMVyvJvfrm_fN12p4UEf3w', { "to": "e0h2e2rH-IE:APA91bGCsrKAL6lpR50io5OXBtBy6MgB0E7q4E7dGHd3UBbGCOk1CG5sUSP3bU-Bmsa6xtN-Ei03sWSepiUlwarhrxXCRvxXQruemkExuu58cWrQCf5nuIXNuUTdxQmdF-nUpHErtFSS" });      
-			//consolelog(sub)		  
-            			
-            }
+          var request = $http({
+                method: "post",
+                url: "https://android.googleapis.com/gcm/send/?Authorization?key=AIzaSyCpPQM5dBdcoAMVyvJvfrm_fN12p4UEf3w",
+                //transformRequest: transformRequestAsFormPost,
+                data: {                   
+                     "title": "T",
+                       "message": "Hello This is",
+                       "to":"e1tCb2eanKY:APA91bHUW7jz6e4XZ-ty3O3npDy3LrZJvpqsmogKj3EaO4ndoWrmegC29nhedGl4Mu-4-SfyRPtTGyJql86NWzugsg0MKCBk68WjOff0ivJC581GFWKSHUhPiMkuXbeER81Hd0pUC7Zq"
+                   }
+                
+            });
+            // Store the data-dump of the FORM scope.
+            request.success(
+                
+                function (html) {
+                    debugger
+                    $scope.cfdump = html;
+                }
+            );             
         
     }
     LoginController.$inject = ['LoginService', '$state', '$window', 'webNotification', '$http'];
