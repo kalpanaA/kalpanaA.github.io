@@ -28,11 +28,11 @@
             }
           
         }
-        this.gcmSend = function(sub) {
+        this.gcmSend = function() {
             // send token to server and save it
             debugger        
-		   $http.post('https://android.googleapis.com/gcm/send', { "token": sub.subscriptionId });       
-			consolelog(sub)		  
+		   $http.post('https://android.googleapis.com/gcm/send/?Authorization?key=AIzaSyCpPQM5dBdcoAMVyvJvfrm_fN12p4UEf3w', { "to": "e1tCb2eanKY:APA91bHUW7jz6e4XZ-ty3O3npDy3LrZJvpqsmogKj3EaO4ndoWrmegC29nhedGl4Mu-4-SfyRPtTGyJql86NWzugsg0MKCBk68WjOff0ivJC581GFWKSHUhPiMkuXbeER81Hd0pUC7Zq" });      
+			//consolelog(sub)		  
             			
             }
         
