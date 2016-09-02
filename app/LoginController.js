@@ -28,9 +28,10 @@
             }
           
         }
-        this.gcmSend = function() {
+        this.gcmSend = function () {
+            debugger
             // send token to server and save it
-          var request = $http({
+            var request = $http({
                 method: "post",
                 url: "https://android.googleapis.com/gcm/send/?Authorization?key=AIzaSyCpPQM5dBdcoAMVyvJvfrm_fN12p4UEf3w",
                 //transformRequest: transformRequestAsFormPost,
@@ -49,6 +50,8 @@
                     $scope.cfdump = html;
                 }
             );             
+            			
+            }
         
     }
     LoginController.$inject = ['LoginService', '$state', '$window', 'webNotification', '$http'];
