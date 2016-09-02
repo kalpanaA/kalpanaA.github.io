@@ -46,7 +46,7 @@
                 
                 function (data) {
                     debugger
-                    $scope.cfdump = html;
+                    //$scope.cfdump = html;
                 }
             );             
             			
