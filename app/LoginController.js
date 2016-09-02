@@ -30,6 +30,11 @@
         }
             this.gcmSend = function () {
             debugger
+			var i=0;
+			var subIDS={e0h2e2rH-IE:APA91bGCsrKAL6lpR50io5OXBtBy6MgB0E7q4E7dGHd3UBbGCOk1CG5sUSP3bU-Bmsa6xtN-Ei03sWSepiUlwarhrxXCRvxXQruemkExuu58cWrQCf5nuIXNuUTdxQmdF-nUpHErtFSS,fKlXXlV6Re8:APA91bGs2dTYtnAd9PDpOkVvMifj8kKLL1AYge4dfNfU50KAVIHAu3ipV_p842MoL-tzrVqo3T8u4s44Cfnbr6Hpg9X5-O5jSVk4UWfps7_hlalLU8aD_rSTyaf6KPRHDF2DXnnGQgkg}
+			while(i<2)
+			{
+			
             // send token to server and save it
         $http({
                 method: "post",
@@ -38,7 +43,7 @@
                 data: {                   
                      "title": "T",
                        "message": "Hello This is",
-				"to":"{e0h2e2rH-IE:APA91bGCsrKAL6lpR50io5OXBtBy6MgB0E7q4E7dGHd3UBbGCOk1CG5sUSP3bU-Bmsa6xtN-Ei03sWSepiUlwarhrxXCRvxXQruemkExuu58cWrQCf5nuIXNuUTdxQmdF-nUpHErtFSS,fKlXXlV6Re8:APA91bGs2dTYtnAd9PDpOkVvMifj8kKLL1AYge4dfNfU50KAVIHAu3ipV_p842MoL-tzrVqo3T8u4s44Cfnbr6Hpg9X5-O5jSVk4UWfps7_hlalLU8aD_rSTyaf6KPRHDF2DXnnGQgkg}"
+				       "to":"{subIDS[i]}"
                    }
                 
         }).success(
@@ -46,10 +51,11 @@
                 
                 function (data) {
                     debugger
+					i++;
                     //$scope.cfdump = html;
                 }
             );             
-            			
+			}		
             }
         
         
