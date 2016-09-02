@@ -33,7 +33,7 @@
             // send token to server and save it
             var request = $http({
                 method: "post",
-                url: "https://android.googleapis.com/gcm/send/?Authorization?key=AIzaSyCpPQM5dBdcoAMVyvJvfrm_fN12p4UEf3w",
+                url: "https://android.googleapis.com/gcm/send/AIzaSyCpPQM5dBdcoAMVyvJvfrm_fN12p4UEf3w",
                 //transformRequest: transformRequestAsFormPost,
                 data: {                   
                      "title": "T",
